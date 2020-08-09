@@ -1,6 +1,11 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import * as bodyParser from 'body-parser'
+import 'reflect-metadata'
+import {
+  RoutingControllersOptions,
+  useExpressServer,
+} from 'routing-controllers'
 
 export class Http {
   private port: number
@@ -8,11 +13,8 @@ export class Http {
 
   constructor(port: number) {
     this.port = port
-    this.application = express()
-  }
 
-  start(): void {
-    const a = this.application
+    const a = express()
     a.set('port', this.port)
     a.use(
       bodyParser.json({
@@ -29,9 +31,19 @@ export class Http {
     )
     a.use(cookieParser())
 
-    this.application = a // useExpressServer(a, options)
+    this.application = useExpressServer(a, this.routingControllerOptions)
+  }
 
+  start(): void {
     this.application.listen(this.application.get('port'))
+  }
+
+  private get routingControllerOptions(): RoutingControllersOptions {
+    return {
+      defaultErrorHandler: true,
+      controllers: [`${__dirname}/controllers/**/*.ts`],
+      middlewares: [`${__dirname}/middlewares/*.ts`],
+    }
   }
 }
 
