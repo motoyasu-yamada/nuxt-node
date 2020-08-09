@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "nuxt:dev": "nuxt-ts",
+    "nuxt:build": "nuxt-ts build",
+    "nuxt:start": "nuxt-ts start",
+    "nuxt:generate": "nuxt-ts generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
-    "test": "jest"
+    "nuxt:test": "jest --config jest.config.nuxt.js"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
