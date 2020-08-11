@@ -2,6 +2,9 @@
   "name": "nuxt-node-template",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "12.18"
+  },
   "scripts": {
     "node:start": "./node_modules/.bin/ts-node --type-check --project main/node/tsconfig.json main/node/http.ts",
     "nuxt:dev": "nuxt-ts",

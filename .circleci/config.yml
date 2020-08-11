@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.18.0-browsers
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - run:
+          name: npm-install
+          command: npm install
+      - run:
+          name: test-node
+          command: npm run node:test
+      - run:
+          name: test-nuxt
+          command: npm run nuxt:test
