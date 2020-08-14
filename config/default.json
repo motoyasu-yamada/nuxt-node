@@ -1,0 +1,15 @@
+{
+    "env": "none",
+    "mysql": {
+      "typeCast": true,
+      "timezone": "UTC",
+      "charset": "utf8mb4",
+      "connectTimeout": 5000,
+      "aquireTimeout": 5000,
+      "timeout": 5000,
+      "host": "127.0.0.1",
+      "user": "root",
+      "database": "main",
+      "port": 3306
+    }
+  }

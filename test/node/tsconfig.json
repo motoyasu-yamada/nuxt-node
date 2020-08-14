@@ -1,9 +1,10 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "es2019",
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "lib": ["es2019"],
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
@@ -17,5 +18,6 @@
     },
     "types": ["@types/node", "@types/jest"]
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "include": ["../../config/**/*.*"],
+  "exclude": []
 }
