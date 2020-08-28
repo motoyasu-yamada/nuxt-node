@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/order */
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import * as bodyParser from 'body-parser'
@@ -6,6 +9,8 @@ import {
   RoutingControllersOptions,
   useExpressServer,
 } from 'routing-controllers'
+import { a } from './index-test'
+import { config, Config } from 'node-config-ts'
 
 export class Http {
   private port: number

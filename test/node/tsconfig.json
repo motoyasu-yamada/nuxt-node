@@ -11,13 +11,11 @@
     "strict": true,
     "noEmit": true,
     "experimentalDecorators": true,
-    "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["../../main/node/*"],
+      "@/*": ["../../main/node/*"]
     },
-    "types": ["@types/node", "@types/jest"]
+    "types": ["@types/jest"],
   },
-  "include": ["../../config/**/*.*"],
-  "exclude": []
+  "include": ["../../config/**/*.*","../../main/node/**/*.*"]
 }

@@ -18,5 +18,5 @@
     "types": ["@types/node", "@nuxt/types"],
     "rootDir": "."
   },
-  "exclude": ["node_modules", ".nuxt", "dist", "tesr", "main/node", "config"]
+  "exclude": ["node_modules", ".nuxt", "dist"]
 }

@@ -10,14 +10,14 @@
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
+      "~/*": ["../../main/node/*"],
+      "@/*": ["../../main/node/*"]
     },
-    "types": ["@types/node"]
+    "types": ["@types/node"],
+    "baseUrl": ".",
   },
-  "include": ["../../config/**/*.*"],
-  "exclude": []
+  "include": ["../../config"]
 }
